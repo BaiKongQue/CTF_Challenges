@@ -10,15 +10,16 @@ eyJpbmdyZWRpZW50Ijp7IiBiIjoiWjNwbWJtVjFlV04zZHc9PSJ9LCJtZWFzdXJlbWVudHMiOnsiIGIi
 
 # Session Cookie #
 When the data is decoded it contains the following:
-[eyJpbmdyZWRpZW50Ijp7IiBiIjoiWjNwbWJtVjFlV04zZHc9PSJ9LCJtZWFzdXJlbWVudHMiOnsiIGIiOiJNVEV0TlRNPSJ9fQ]
+
+`eyJpbmdyZWRpZW50Ijp7IiBiIjoiWjNwbWJtVjFlV04zZHc9PSJ9LCJtZWFzdXJlbWVudHMiOnsiIGIiOiJNVEV0TlRNPSJ9fQ`
 ```json
 {"ingredient":{" b":"Z3pmbmV1eWN3dw=="},"measurements":{" b":"MTEtNTM="}}
 ```
-[YJckTQ]
+`YJckTQ`
 ```json
 `$M
 ```
-[4-QFL78wdMOipUhdVzutRM830_0]
+`4-QFL78wdMOipUhdVzutRM830_0`
 ```json
 4-@RL:*TsL}?
 ```
