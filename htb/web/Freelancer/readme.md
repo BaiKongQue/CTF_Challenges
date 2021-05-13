@@ -8,18 +8,19 @@ There are a few things that stood out to me initially:
 	- a hint on how one of the php files work a little
 	- there is "portfolio.php" that takes params "?id"
 
-# "Contact Me" #
+## "Contact Me" ##
 I tried inputing some html and js to see if it was prone to XSS, but the response is always 500 leading it to a dead end
 
-# Web Dir #
+## Web Dir ##
 I explored different directorys (/images, /js, /mail) but none seemed to provide enough information to be used.
 
-# Comments #
+## Comments ##
 The hints of changing the email in one of the files is no help to figuring out a vulnerability if we cant see the file.
 
 I took a look at the `/portfolio.php?id=1` and found if id is 1-3 it will return text.
 
-# SQL Map #
+# Infiltration #
+## SQL Map ##
 seeing that this file and parameters may be the only vulnerability, I tried SqlMap against it.
 
 I ran `sqlmap -u ip:port/portfolio.php?id=1 --tables` to get all the schemes and tables if there are any.
@@ -47,12 +48,12 @@ Table: safeadmin
 +----+--------------------------------------------------------------+----------+---------------------+
 ```
 
-# Password #
+## Password ##
 Looking at the password imediatly I can tell they used one of PHP's `password_hash(...)` functions, depening on what they used it could be difficult to crack.
 
 I decided to circle back to this later. Now knowing that there is a user I assumed there would be some form or login to authenticate with this user.
 
-# OWASP Dir Buster #
+## OWASP Dir Buster ##
 I ran Dir Buster to look for more routes that I could not see immediatly. For this task I ran it with 100 threads and used the `common.txt` list located in `/usr/share/dirb/wordlists/`
 
 letting the program run for a bit of time, it imediately found some files that I did not find on my exploration:
@@ -67,7 +68,8 @@ The Program found may more files in the administrat folder:
 
 checking out the administrat page on the browser it is clearly a login for a admin user, but without the proper credentials it is useless. The logout page is only for logging out, it will not help get the flag.
 
-# SqlMap File #
+# Exfiltration #
+## SqlMap File ##
 I wanted to check out the `panel.php`, knowing that the some web directories use `/var/www/html/` file, I ran `sqlmap -u ip:port/portfolio.php?id=1 --file-read="/var/www/html/administrat/panel.php"` to retrieve the file content.
 
 checking the content of the panel.php I just extracted, I found the flag I was looking for!

