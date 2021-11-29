@@ -1,7 +1,7 @@
 import requests
 from string import ascii_lowercase, ascii_uppercase
 
-url = "http://138.68.182.108:31009/"
+url = "http://ip:port/"
 
 chars = ascii_lowercase + ascii_uppercase + '0123456789_{}+-!@#$%^&`~/\\\'"()'
 

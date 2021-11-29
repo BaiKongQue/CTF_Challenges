@@ -2,7 +2,7 @@ import requests
 import hashlib
 from HTMLParser import HTMLParser
 
-url = "http://159.65.21.69:32437/"
+url = "http://ip:port/"
 
 s = requests.Session()
 

@@ -15,7 +15,7 @@ def ParseEncode(str: str, url: bool = False):
 	else:
 		return str.replace(' ', '\u0120')	# send back if for http encoding
 
-url = 'http://178.62.7.184:31837/'
+url = 'http://ip:port/'
 newAdminPassword = "asdf"
 
 username = ParseEncode('admin', True)	# username to send

