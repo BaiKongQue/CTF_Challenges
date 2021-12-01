@@ -14,6 +14,7 @@ These are the steps we will take to extract the ID:
 4. open inspect element and inspect the `li` of the result that pops up
 5. in the `li` that pops up, it should have a attribute `oid`, go ahead copy the value (`117395327982835488254`) to the clipboard
 
+# Google Maps Contributor Page #
 we will go directly to the contributor profile on google maps with the ID we got, so it will look like the following: `https://www.google.com/maps/contrib/117395327982835488254`
 
 The user that we find is "Flag Watcher" showing that we are in the right place. Looking at the "Reviews" tab we see they made two reviews on different locations. Clicking on one of the reviews we find the flag in their description!
