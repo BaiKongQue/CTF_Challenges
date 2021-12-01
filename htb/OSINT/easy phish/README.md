@@ -72,6 +72,6 @@ secure-startup.com.     600     IN      SOA     ns69.domaincontrol.com. dns.joma
 ;; MSG SIZE  rcvd: 121
 ```
 
-After analyzing the results, we can see that the company has not properly configured their SPF, DMARC, and DKIM records. This could leave them suseptible to phishing attacks.
+After analyzing the results, we can see that the company has not properly configured their SPF and DMARC records. This could leave them suseptible to phishing attacks.
 
 Also, it can be seen that parts of the flag is in the SFP and DMARC records, putting them together we get the full flag, completing the challenge.
