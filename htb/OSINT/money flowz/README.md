@@ -37,6 +37,6 @@ Checking what they are we see there are 2 accounts:
 
 Ropsten Testnet is similar to what I saw in the comments above. Going to the page we can see there are a lot of incoming transactions to this account.
 
-Using the website GUI to filter only outgoing transactions, we can see that there are two outgoing transactions. Checking the first one there is input data on connected to it. Changing the view to UTF-8 we can find the flag!
+Using the website GUI to filter only outgoing transactions, we can see that there are two outgoing transactions. Checking the first one there is input data connected to it. Changing the view to UTF-8 we can find the flag!
 
 Checking the other outgoing transaction and its input gives us the same flag!
